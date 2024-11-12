@@ -56,8 +56,8 @@ const Model = () => {
                 <button onClick={openModal}>Open Form</button>
                 {
                     isOpen && (
-                        <div className="modal" onClick={(e) => e.stopPropagation()}>
-                            <div className="modal-content"  >
+                        <div className="modal" onClick={closeModal}>
+                            <div className="modal-content" onClick={(e) => e.stopPropagation()} >
                                 <button onClick={closeModal} className='close'>&times;</button>
                                 <h3>Fill Details</h3>
                                 <form onSubmit={handleSubmit}>
